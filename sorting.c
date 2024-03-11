@@ -68,7 +68,6 @@ void merge(int a[], int begin, int mid, int end, int* steps)
         (*steps)++;
     }
 }
-
 void mergeSort(int a[], int begin, int end, int *steps)
 {
     if (begin < end)
@@ -76,10 +75,9 @@ void mergeSort(int a[], int begin, int end, int *steps)
         int mid = (begin + end) / 2;
         mergeSort(a, begin, mid, steps);
         mergeSort(a, mid + 1, end, steps);
-        merge(a, begin, mid, end, steps); // Count steps during merge operation
+        merge(a, begin, mid, end, steps); 
     }
 }
-
 
 int partition(int a[], int begin, int end, int *steps) 
 {
@@ -154,6 +152,6 @@ int main()
     }
     else
         printf("Wrong Choice!");
-    printf("steps= %d", steps);
+    printf("Steps= %d", steps);
     return 0;
 }
