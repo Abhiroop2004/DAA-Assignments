@@ -9,7 +9,7 @@ int main()
     int i,a[n];
     for (i=0; i<n; i++)
     {
-        a[i]=rand()%10000;
+        a[i]=rand()%1000;
         fprintf(r,"%d\n",a[i]);
     }
     fclose(r);
