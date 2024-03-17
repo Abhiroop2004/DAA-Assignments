@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <limits.h>
-// Optimal subtructure and Overlapping subproblem
 void mcm(int d[], int n)
 {
 	int l,i,j,k,mink;
@@ -17,7 +16,6 @@ void mcm(int d[], int n)
 			for(k=i; k<j; k++)
 			{
 				int currentCost=cost[i][k]+(d[i]*d[k+1]*d[j+1])+cost[k+1][j];
-				printf("%d\n",currentCost);
 				if(currentCost<minCost)		{minCost=currentCost; mink=k+1;}
 			}
 			cost[i][j]=minCost;
@@ -61,7 +59,5 @@ int main()
 		else
 			printf("Error!\n");
 	}	
-	for (i=0;i<=n;i++)
-		printf("%d ",a[i]);
 	mcm(a,n);
 }
