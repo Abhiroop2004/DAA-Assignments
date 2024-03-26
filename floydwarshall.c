@@ -32,9 +32,9 @@ int main()
     printf("Enter number of edges:");
     scanf("%d",&m);
     int a[n][n];
-    for (i=0;i<=n;i++)
+    for (i=0;i<n;i++)
     {
-        for (j=0;j<=n;j++)
+        for (j=0;j<n;j++)
             if (i==j)   a[i][j]=0;
             else a[i][j]=INT_MAX;
     }
@@ -43,15 +43,7 @@ int main()
     {
         scanf("%d %d %d",&v1, &v2, &w);
         a[v1-1][v2-1]=w;
-    }
-    for (i=0;i<n;i++)
-    {
-        for(j=0;j<n;j++)
-            if (a[i][j] == INT_MAX)   printf("INF ");
-            else printf("%d  ",a[i][j]);
-        printf("\n");
-    }      
+    }  
     printf("All Pair Shortest Path:\n");  
-    floyd(3, a);
-};
+    floyd(n, a);
 }
