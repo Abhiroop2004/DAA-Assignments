@@ -1,5 +1,5 @@
 #include <stdio.h>  
-#include <stdlib.h> // Need to include this header file for malloc
+#include <stdlib.h> 
 #include <limits.h>
 #define MAX 10  
 
@@ -75,11 +75,9 @@ int main() {
 
     DijkstraAlgorithm(graph, v, start);
 
-    // Free dynamically allocated memory for 'graph'
     for (int i = 0; i < v; i++) {
         free(graph[i]);
     }
     free(graph);
-
     return 0;
 }
