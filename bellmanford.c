@@ -8,7 +8,6 @@ void BellmanFord(int graph[][3], int size, int e, int start)
     for (i = 0; i < size; i++)
         distance[i] = MAX;
     distance[start] = 0;
-    printf("Here!");
     for (i = 0; i < size - 1; i++) {
         for (j = 0; j < e; j++) {
             if (distance[graph[j][0]] != MAX && distance[graph[j][0]] + graph[j][2] < distance[graph[j][1]])
