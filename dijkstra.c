@@ -51,7 +51,7 @@ int main()
     }
     printf("Enter number of edges for graph:");
     scanf("%d", &e);
-    printf("Enter edges of graph 0 to %d along with weight\n", v - 1);
+    printf("Enter edges of graph with verrtices 1 to %d along with weight\n", v);
     for (int i = 0; i < e; i++)
     {
       scanf("%d %d %d", &v1, &v2, &w);
